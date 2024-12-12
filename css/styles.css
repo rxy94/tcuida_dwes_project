@@ -1,0 +1,742 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 18px;
+    height: 100%;
+    width: 100%;
+}
+
+input:focus {
+    outline-color: orange;
+}
+
+/************************************    index.php    ***********************************/
+#login-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../img/background.jpg);
+}
+
+.container-login {
+    display: flex;        
+    height: 100%;            
+    width: 100%;             
+    max-width: 100%;
+}
+
+/* Contenedor del logo */
+.title {
+    color: rgb(240, 248, 255);
+    font-size: 3rem;
+    margin-top: -100px;
+    margin-bottom: 60px;
+    width: 40vw;
+}
+
+.subtitle {
+    width: 40vw;
+    color: rgb(0, 0, 139);
+}
+
+.logo-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    padding: 0 20px;
+    height: 100vh;
+}
+
+/* Formulario */
+.form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 40%;
+    height: 100vh;
+    padding-left: 155px;
+    background-color: rgb(240, 248, 255);
+}
+
+.form-group {
+    margin-block: 10px;
+}
+
+/* Estilo para el encabezado */
+.form-container h1 {
+    margin: -40px 0 30px 70px;
+    font-size: 2.8rem;
+    color: rgb(0, 123, 255);
+}
+
+/* Estilo de los inputs */
+.form-container input {
+    padding: 10px;
+    margin: 10px 0;
+    width: 130%;
+    border-radius: 5px;
+    border: 1px solid rgb(204, 204, 204);
+}
+
+.form-container div:nth-child(3) input  {
+    width: 137%;
+}
+
+/* Estilo para el botón */
+.form-container button {
+    padding: 10px;
+    border: none;
+    background-color: rgb(0, 123, 255);
+    color: rgb(240, 248, 255);
+    cursor: pointer;
+    border-radius: 5px;
+    width: 65%;
+   /*  margin: 0 0 20px 0; */
+    margin-bottom: 20px;
+}
+
+.form-container button:hover {
+    background-color: rgb(0, 0, 139);
+    transition: 0.3s;
+}
+
+/* Textos de ayuda */
+.form-text {
+    font-size: 0.9em;
+    color: rgb(255, 165, 0);
+}
+
+#login-body div>a {
+    color: rgb(0, 123, 255);
+    text-decoration: underline;
+}
+
+#login-body div>a:hover {
+    color: rgb(255, 165, 0);
+}
+
+.password-container {
+    position: relative;
+}
+
+.form-control {
+    padding-right: 40px; 
+    width: 100%; 
+}
+
+.fa-regular {
+    position: absolute;
+    right: -57px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 16px;
+    color: rgba(0, 0, 139, 0.6);
+}
+
+.fa-eye {
+    color: rgb(0, 0, 139);
+}
+
+/************************************    register.php    ***********************************/
+.form-container .register {
+    margin-left: 40px;
+}
+
+#register div:nth-child(3) input {
+    width: 110%;
+}
+
+#register div:nth-child(4) input {
+    width: 111%;
+}
+
+#register #password {
+    width: 162%;
+}
+
+#register .fa-regular {
+    right: -95px;
+}
+
+#register #errorMessage {
+    margin-bottom: 8px;
+}
+
+/************************************    main.php    ***********************************/
+#main-body {
+    display: flex; 
+    background-color: rgb(240, 248, 255);
+}
+
+/* Barra de navegación lateral */
+ul {
+    width: 8vw;
+    height: 100vh;
+    background-color: rgb(0, 0, 139);
+    list-style-type: none;
+    text-align: center;
+    padding-top: 20px;
+    margin: 0; 
+}
+
+li a {
+    display: block;
+    color: rgb(240, 248, 255);
+    padding: 15px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    color: rgb(255, 165, 0);
+    transition: 0.3s;
+}
+
+i {
+    font-size: 38px;
+    color: rgb(240, 248, 255);
+}
+
+li i {
+    margin-top: 500px;
+}
+
+li i:hover {
+    color: rgb(255, 165, 0);
+    transition: 0.5s;
+}
+
+/* Main content */
+header div {
+    width: 100%;
+    height: 23vh;
+    font-size: 2rem;
+    text-align: center;
+    padding-top: 20px;
+    background-color: rgb(0, 123, 255);
+    color: rgb(240, 248, 255);
+    margin-bottom: 20px;
+}
+
+main {
+    width: 92vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.container-main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%; 
+    margin-top: 50px;
+}
+
+.card {
+    width: 40%;
+    height: 50vh;
+    margin: 30px; 
+    border-radius: 15px;
+    box-shadow: 2px 2px 5px rgb(97, 97, 97);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.card-doctor {
+    background-image: url(../img/doctor.jpg);
+    background-size: cover;
+    position: relative;
+}
+
+.card-patient {
+    background-image: url(../img/patient.jpg);
+    background-size: cover;
+    position: relative;
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    border-radius: 15px;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    filter: grayscale(100%) brightness(50%);
+    z-index: 1;
+    opacity: 0.6;
+}
+
+.card-title {
+    color: rgb(240, 248, 255);
+    position: relative;
+    z-index: 2;
+}
+
+.card:hover {
+    width: 43%;
+    height: 53vh;
+    transition: 0.5s;
+    font-size: 4rem;
+    opacity: 0.8;
+}
+
+button {
+    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(0, 0, 139);
+    position: relative;
+    z-index: 2;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgba(255, 165, 0, 0.5);
+}
+
+a {
+    text-decoration: none;
+    color: rgb(240, 248, 255);
+}
+
+div>a:hover {
+    color: rgb(255, 165, 0);
+}
+
+/***************    doctorSearch.php, patientSearch.php, patients.php    ***************/
+#doctor-body,
+#patient-body,
+#patients-body {
+    display: flex; 
+    background-color: rgb(240, 248, 255);
+}
+
+#patients-body .patients-list {
+    margin-left: 24%;
+}
+
+.container-doctor,
+.container-patient,
+.patients-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%; 
+    margin-top: 20px;
+}
+
+.user-icon {
+    margin-right: 10px;
+    vertical-align: middle; 
+}
+
+.fa-user {
+    position: static;
+    color: white;
+    font-size: 20px;
+    cursor: default;
+}
+
+.container-doctor h2,
+.container-patient h2 {
+    font-size: 2.5rem;
+    color: rgb(0, 0, 139);
+    text-align: center;
+}
+
+/* .container-patient h2 {
+    font-size: 2.2rem;
+} */
+
+#doctor-body .form-container,
+#patient-body .form-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    width: 50%;
+    padding: 20px;
+    background-color: rgb(240, 248, 255);
+    height: 19vh;
+}
+
+#doctor-body button,
+#patient-body button {
+    padding: 10px;
+    border: none;
+    background-color: rgb(0, 123, 255);
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 20%;
+    margin-top: 45px;
+    margin-left: 10px;
+}
+
+#doctor-body button:hover,
+#patient-body button:hover {
+    background-color: rgb(0, 0, 139);
+    transition: 0.3s;
+}
+
+#doctor-body .form-group,
+#patient-body .form-group {
+    margin-block: 15px;
+    width: 100%;
+}
+
+#doctor-body .form-control,
+#patient-body .form-control {
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid rgb(204, 204, 204);
+}
+
+.container-doctor p,
+.container-patient p {
+    color: rgb(255, 165, 0);
+    font-size: 1.5rem;
+}
+
+.search-results,
+.patients-list {
+    width: 50%;
+}
+
+.patients-list h3 {
+    font-size: 2rem;
+    margin-block: 10px;
+    color: rgb(0, 0, 139);
+}
+
+.search-results table,
+.patients-list table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.search-results th, .search-results td,
+.patients-list th, .patients-list td {
+    padding: 10px;
+    border: 1px solid rgb(204, 204, 204);
+}
+
+.search-results th,
+.patients-list th {
+    background-color: rgb(0, 123, 255);
+    color: rgb(240, 248, 255);
+}
+
+.search-results td,
+.patients-list td {
+    text-align: center;
+}
+
+table i {
+    font-size: 18px;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+table i.fa-eye {
+    color: rgb(40, 167, 69);
+}
+
+table i.fa-eye:hover {
+    color: rgb(33, 136, 56);
+}
+
+table i.fa-pen {
+    color: rgb(255, 193, 7);
+}
+
+table i.fa-pen:hover {
+    color: rgb(224, 168, 0); 
+}
+
+table i.fa-trash {
+    color: rgb(220, 53, 69); 
+}
+
+table i.fa-trash:hover {
+    color: rgb(200, 35, 51);
+}
+
+/****************************   viewDoctor.php, viewPatient.php    ****************************/
+.doctor-card,
+.patient-card {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.doctor-card-content,
+.patient-card-content {
+    display: flex;
+    flex-direction: row;
+    width: 45%;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(97, 97, 97, 0.2);
+    background-color: rgba(0, 123, 255, 0.1);
+    color: rgb(0, 0, 139);
+    padding: 20px;
+}
+
+.patient-card-content {
+    flex-wrap: wrap;
+}
+
+.patient-card-content>div {
+    width: 100%;
+}
+
+.patient-card-right + div {
+    width: 100%;
+    text-align: center;
+}
+
+#patient-body .patient-card-content button {
+    margin-top: 20px;
+}
+
+.doctor-card-left,
+.patient-card-left {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.patient-card-left {
+    flex: 2;
+}
+
+.doctor-card-right,
+.patient-card-right {
+    flex: 2;
+    padding-left: 20px;
+}
+
+.doctor-photo {
+    width: 170px;
+    height: 235px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.doctor-card h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.doctor-card p {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+#especialidades li {
+    margin-bottom: 5px;
+}
+
+#doctor-body .doctor-card-right button,
+#patient-body .patient-card-right button  {
+    margin-top: 20px;
+}
+
+#doctor-body .doctor-card-right button:nth-of-type(2) {
+    width: 150px;
+}
+
+#doctor-body .btn,
+#patient-body .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: rgb(0, 123, 255);
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.btn:hover {
+    background-color: rgb(0, 86, 179);
+}
+
+
+/*******    addDoctor.PHP,  updateDoctor.php, patients.php, addPatient.php, updatePatient.php    ********/
+#addDoctor-body, 
+#updateDoctor-body,
+#addPatient-body, 
+#updatePatient-body {
+    display: flex; 
+    background-color: rgb(240, 248, 255);
+}
+
+#addDoctor-body .form-container, 
+#updateDoctor-body .form-container, 
+#addPatient-body .form-container,
+#updatePatient-body .form-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    width: 70%;
+    padding: 20px;
+    background-color: rgb(240, 248, 255);
+    height: 65vh;
+}
+
+#addDoctor-body button, 
+#updateDoctor-body button,
+#patients-body button,
+#addPatient-body button,
+#updatePatient-body button {
+    padding: 10px;
+    border: none;
+    background-color: rgb(0, 123, 255);
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 20%;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+#addDoctor-body button:hover, 
+#updateDoctor-body button:hover,
+#patients-body button:hover,
+#addPatient-body button:hover, 
+#updatePatient-body button:hover {
+    background-color: rgb(0, 0, 139);
+    transition: 0.3s;
+}
+
+#addDoctor-body .form-group, 
+#updateDoctor-body .form-group,
+#addPatient-body .form-group,
+#updatePatient-body .form-group  {
+    margin-inline: 5px;
+    width: 40%;
+}
+
+#addDoctor-body .form-control, 
+#updateDoctor-body .form-control,
+#addPatient-body .form-control,
+#updatePatient-body .form-control {
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid rgb(204, 204, 204);
+}
+
+#addDoctor-body .form-group:nth-of-type(7),
+#updateDoctor-body .form-group:nth-of-type(7) {
+    width: 81%;
+}
+
+#addDoctor-body header div,
+#updateDoctor-body header div,
+#addPatient-body header div,
+#updatePatient-body header div  {
+    margin-bottom: 5px;
+    height: 20vh;
+}
+
+.form-container select {
+    margin: 5px 0;
+
+}
+
+.fa-check,
+.fa-circle-exclamation {
+    color: rgb(255, 165, 0);
+    font-size: 24px;
+}
+
+.fa-user-doctor,
+.fa-hospital-user {
+    color: rgb(0, 0, 139);
+    font-size: 36px;
+}
+
+/****************************  patients.php  *****************************/
+.patients-list a>span {
+    color: rgb(0, 0, 139);
+}
+
+.patients-list a>span:hover {
+    color: rgb(255, 165, 0);
+}
+
+/****************************  patientSearch.php  *****************************/
+.pagination ul {
+    display: flex;
+    flex-direction: row;
+    height: 0;
+    width: 100px;
+    background-color: rgb(240, 248, 255);
+}
+
+.pagination li a {
+    display: inline;
+    color: rgb(0, 123, 255);
+}
+
+/****************************  viewPatient.php  *****************************/
+.patient-card h2 {
+    font-size: 34px;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.patient-card p {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.patient-card-left {
+    margin-left: 10px;
+}
+
+.fa-triangle-exclamation {
+    color: rgb(255, 165, 0);
+    font-size: 18px;
+    margin-right: 5px;
+}
+
+/****************************  addPatient.php, updatePatient.php  *****************************/
+#addPatient-body .form-group,
+#updatePatient-body .form-group {
+    margin-block: 5px;
+}
+
+#addPatient-body .form-group:nth-of-type(1), 
+#addPatient-body .form-group:nth-of-type(2), 
+#addPatient-body .form-group:nth-of-type(3),
+#updatePatient-body .form-group:nth-of-type(1), 
+#updatePatient-body .form-group:nth-of-type(2), 
+#updatePatient-body .form-group:nth-of-type(3) {
+    width: 26.3%;
+}
+
+#alergias,
+#diagnosticos {
+    width: 300px;
+}
